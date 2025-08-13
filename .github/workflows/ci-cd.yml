@@ -21,7 +21,7 @@ jobs:
         with:
           python-version: 3.12
       - run: pip install flake8 black
-      - run: - run: flake8 app tests src --max-line-length=100
+      - run: flake8 app tests src --max-line-length=100
       - run: black --check .
 
   tests:
