@@ -2,7 +2,9 @@ name: Full DevSecOps Pipeline
 
 permissions:
   contents: read
-  security-events: write
+  pull-requests: write
+  issues: write
+  id-token: write
 
 on:
   push:
@@ -59,7 +61,7 @@ jobs:
     needs: sast
     steps:
       - uses: actions/checkout@v4
-      - uses: trufflesecurity/trufflehog@v2.0.0
+      - uses: trufflesecurity/trufflehog@v3.90.3
         with:
           path: ./
           github_token: ${{ secrets.GITHUB_TOKEN }}
