@@ -1,0 +1,28 @@
+Python cache
+_pycache_/
+*.pyc
+*.pyo
+*.pyd
+
+Virtual environment
+venv/
+env/
+
+Tests
+tests/
+
+Logs
+*.log
+
+Git and config files
+.git/
+.gitignore
+.dockerignore
+
+IDE/editor folders
+.vscode/
+*.swp
+
+OS files
+.DS_Store
+Thumbs.db
