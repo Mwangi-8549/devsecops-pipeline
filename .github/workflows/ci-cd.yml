@@ -1,5 +1,9 @@
 name: Full DevSecOps Pipeline
 
+permissions:
+  contents: read
+  security-events: write
+
 on:
   push:
     branches: [ main ]
@@ -46,6 +50,7 @@ jobs:
       - uses: github/codeql-action/init@v3
         with:
           languages: python
+          paths: app, tests, src
       - uses: github/codeql-action/analyze@v3
 
   secrets-scan:
