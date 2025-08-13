@@ -59,7 +59,7 @@ jobs:
     needs: sast
     steps:
       - uses: actions/checkout@v4
-      - uses: trufflesecurity/trufflehog@latest
+      - uses: trufflesecurity/trufflehog@v2.0.0
         with:
           path: ./
           github_token: ${{ secrets.GITHUB_TOKEN }}
